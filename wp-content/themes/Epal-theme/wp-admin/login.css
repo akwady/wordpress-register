@@ -1,0 +1,545 @@
+body {
+    color: #2c2c2c;
+    font-size: 14px;
+    font-family: "Muli","Helvetica Neue",Arial,sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+body {
+    background-color: #f4f7f6;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: 'Muli', Arial, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+.theme-black {
+    background: #313740 !important;
+}
+
+.authentication {
+    height: 100vh;
+    max-height: 1050px;
+    padding: 0;
+    position: relative;
+}
+
+.authentication .company_detail .logo img {
+    width: 45%;
+    vertical-align: top;
+}
+
+.authentication::before {
+    background-image: url(../images/logo-e.svg);
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: 0.02;
+    width: 80%;
+    height: 80%;
+    background-position-x: 28%;
+    top: 10%;
+    left: 18px;
+}
+
+.authentication .container>.content-center {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-41%, -50%);
+    text-align: center;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 960px;
+    z-index: 99;
+}
+
+.authentication .company_detail {
+    color: #fff;
+}
+
+.align-left, .menu_sm .sidebar .list li:hover .ml-menu a, .dropdown-menu .header, .authentication .company_detail, .profile-page .profile_tab {
+    text-align: left;
+}
+
+.m-b-40, .authentication .company_detail .logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.authentication .company_detail .logo img {
+    width: 45%;
+    vertical-align: top;
+}
+
+.company_detail h3:nth-child(2) {
+    display: inline-block;
+    width: 50%;
+}
+
+.company_detail p:nth-child(3) {
+    display: inline-block;
+    width: 40%;
+}
+
+.authentication .company_detail p {
+    opacity: 0.6;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.footer {
+    padding: 24px 0 0;
+    padding-top: 0px;
+}
+.footer:after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+.footer ul li {
+    display: inline-block;
+}
+.card-plain {
+    background: transparent;
+    box-shadow: none;
+}
+.authentication .card-plain {
+    border-radius: .55rem;
+    padding-bottom: .7rem;
+    max-width: 330px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.3);
+}
+.authentication .card-plain.card-plain {
+    margin: 0 auto;
+}
+.copyright-tmr-col-right {
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 30px;
+}
+.copyright-tmr-right > ul {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.copyright-tmr-right > ul > li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.copyright-tmr-col-right a {
+    color: #fff;
+}
+.footer > ul > li {
+    display: inline-block;
+    padding: 0 23px;
+}
+.copyright-tmr {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+}
+
+.copyright-tmr-col-left {
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+    padding-bottom: 1%;
+}
+
+.logo-link-img {
+    width: 22%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    height: auto;
+}
+
+img.logo-link-img.logo-halo {
+    width: 18%;
+}
+
+.logo-link-img {
+    width: 22%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    height: auto;
+}
+.login-name {
+    margin-right: 7%;
+    font-weight: 400;
+    font-size: 30px;
+    opacity: 0.7;
+}
+.company_detail h3:nth-child(2) {
+    display: inline-block;
+    width: 50%;
+}
+.company_detail p:nth-child(3) {
+    display: inline-block;
+    width: 40%;
+}
+p {
+    line-height: 1.61em;
+}
+.footer ul li a {
+    color: inherit;
+    padding: .5rem;
+    font-size: .93em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.logo-login-halo {
+    box-shadow: none !important;
+    width: 65% !important;
+}
+#loginform > p:first-child input:focus,
+#loginform > p:nth-child(2) input:focus {
+    border-color: #1cbc9c;
+    background: #fff;
+
+}
+
+#loginform > p:first-child input,
+#loginform > p:nth-child(2) input {
+    background-color: transparent;
+    border: 1px solid #E3E3E3;
+    border-radius: 30px;
+    color: #2c2c2c;
+    font-weight: 250;
+    font-size: 12px;
+    -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    padding: 7px 20px 7px 25px;
+    height: 44px;
+}
+
+
+#loginform > p:first-child > input,
+#loginform > p:nth-child(2) > input{
+    background:  #fff;
+    border-radius: 0px 30px 30px 0px;
+    border: 1px solid #E3E3E3;
+    border-left:  0px solid;
+}
+
+.copyright-tmr-col-right a:hover {
+    color: #fff;
+}
+.copyright-tmr-col-right a svg {
+    width: 15px;
+    height: 15px;
+}
+
+.login h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.login h1 a{
+    background: none !important;
+    text-indent:initial;
+    width: initial;
+    margin: 0;
+
+}
+#login form p{
+    position: relative;
+}
+.class-icon svg {
+    font-size: 12px;
+    width: 15px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #555;
+}
+
+#loginform{
+    box-shadow: none !important;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#login{
+    border-radius: .55rem;
+    background: #fff;
+    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.3);
+    padding: 20px 0 25px !important;
+}
+.login label {
+    text-align: left;
+    width: 100%;
+}
+.css-login {
+    float: right !important;
+}
+.css-login img{
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+input#rememberme {
+    margin: -4px 0 0 0;
+}
+p.forgetmenot {
+    display: none;
+}
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large{
+    width: 100%;
+    height: 40px;
+    background: #1abc9c;
+    border: none;
+    border-radius: 30px;
+    box-shadow: none;
+    text-shadow: none;
+}
+.wp-core-ui .button-group.button-large .button:hover, .wp-core-ui .button.button-large:hover{
+    background-color: #888;
+}
+#nav > a:hover{
+    color: #f96332 !important;
+}
+
+.text-center hr{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #80808066;
+}
+
+p#backtoblog {
+    display: none;
+}
+
+.logo-epal-bottom{
+    margin-top: 23px;
+}
+.logo-epal-bottom a:last-child img{
+    max-width: 81px !important;
+}
+
+
+
+@media (min-width:1800px){
+    .authentication::before {
+        width: 86%;
+        height: 60%;
+        top: 19%;
+        left: 4%;
+    }
+}
+@media (min-width:1500px){
+    .authentication::before {
+        width: 88%;
+    }
+}
+@media (max-width:1340px){
+    .authentication::before {
+        width: 88%;
+        top: 9%;
+        left: -32px;
+        height: 80%;
+    }
+}
+@media (max-width:1250px){
+    .authentication::before {
+        width: 88%;
+        top: 9%;
+        left: -45px;
+        height: 80%;
+    }
+}
+@media(max-width: 1200px){
+    .authentication::before {
+        width: 88%;
+        top: 9%;
+        left: -5%;
+        height: 80%;
+    }
+}
+
+@media(max-width: 1130px){
+    .authentication::before {
+        width: 88%;
+        top: 9%;
+        left: -6%;
+        height: 80%;
+    }
+}
+@media(max-width: 1040px){
+    .authentication::before {
+        width: 88%;
+        top: 9%;
+        left: -7%;
+        height: 80%;
+    }
+}
+@media(max-width: 1000px){
+    .authentication::before {
+        width: 88%;
+        top: 9%;
+        left: 0;
+        height: 80%;
+        background-position-x: 4%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media(max-width: 950px){
+    #login {
+        margin: 0;
+        display: inline-block;
+    }
+    .footer > ul > li {
+        padding: 0 12px;
+    }
+
+}
+@media(max-width: 900px){
+    .authentication::before {
+        width: 88%;
+        top: 14%;
+        left: 0;
+        height: 70%;
+        background-position-x: 4%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .company_detail p:nth-child(3) {
+        width: 30%;
+    }
+    .company_detail h3:nth-child(2) {
+        width: 60%;
+    }
+
+}
+
+@media(max-width: 810px){
+    .authentication::before {
+        width: 55%;
+        top: 14%;
+        left: 8px;
+        height: 70%;
+        background-position-x: 6%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .company_detail p:nth-child(3) {
+        width: 30%;
+    }
+    .company_detail h3:nth-child(2) {
+        width: 60%;
+    }
+    .col-lg-6.col-md-6.col-sm-6.col-xs-12 {
+        left: 15px;
+    }
+    .footer > ul > li {
+        padding: 0 8px;
+    }
+
+}
+@media(max-width: 767px){
+    .authentication .container>.content-center {
+        top: 66%;
+        left: 38%;
+        position: initial;
+        -ms-transform: initial;
+         -webkit-transform: initial;
+         transform: initial;
+         text-align: center;
+         padding: 0 15px;
+         width: 100%;
+         max-width: 960px;
+         z-index: 99;
+    }
+    .authentication {
+        padding: 34px 0 0;
+    }
+    .m-b-40, .authentication .company_detail .logo {
+        margin-bottom: 18px;
+        text-align: center;
+    }
+    .css-login {
+        float: none !important;
+        margin-top: 25px;
+        display: inline-block;
+    }
+    .xs-hidden{
+        display: none;
+    }
+
+}
+@media(max-width: 500px){
+    .login-name {
+        font-size: 25px;
+    }
+    .company_detail h3:nth-child(2) {
+        width: 52%;
+    }
+}
+@media(max-width: 400px){
+    .footer > ul > li {
+        padding: 0 2px;
+    }
+    .login-name {
+        font-size: 25px;
+    }
+    .company_detail h3:nth-child(2) {
+        width: 53%;
+    }
+    .company_detail p:nth-child(3) {
+        width: 34%;
+    }
+    .footer ul li a {
+        font-size: 12px;
+    }
+    .copyright-tmr-right > ul > li {
+        margin: 0 9px;
+    }
+    #login {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .authentication .company_detail .logo img {
+        width: 70%;
+    }
+    .authentication::before {
+        width: 100%;
+        height: 88%;
+    }
+    .col-lg-6.col-md-6.col-sm-6.col-xs-12 {
+        left: 0;
+    }
+    .authentication .container>.content-center {
+        top: 65%;
+        left: 41%;
+    }
+}
