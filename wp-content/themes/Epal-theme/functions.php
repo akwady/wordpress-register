@@ -16,7 +16,8 @@ $file_includes = [
     'inc/theme-setup.php',                  // General theme setting
     'inc/acf-options.php',                  // ACF Option page
     'inc/theme-shortcode.php',              // Theme Shortcode
-    'inc/button-editer.php'                 // Button Editer
+    'inc/button-editer.php',                // Button Editer
+    'inc/login-register-user.php'           // Login Register User
 ];
 
 foreach ($file_includes as $file) {

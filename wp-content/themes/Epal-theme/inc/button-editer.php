@@ -47,6 +47,88 @@ function boxes_plugin_that_add_style_formats_options( $settings ){
             ),
         ),
         array(
+            'title'   => 'Line height',
+            'items' => array(
+                array(
+                    'title' => '20',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '20px',
+                    ),
+                ),
+                array(
+                    'title' => '21',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '21px',
+                    ),
+                ),
+                array(
+                    'title' => '22',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '22px',
+                    ),
+                ),
+                array(
+                    'title' => '23',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '24px',
+                    ),
+                ),
+                array(
+                    'title' => '24',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '24px',
+                    ),
+                ),
+                array(
+                    'title' => '25',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '25px',
+                    ),
+                ),
+                array(
+                    'title' => '26',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '26px',
+                    ),
+                ),
+                array(
+                    'title' => '27',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '27px',
+                    ),
+                ),
+                array(
+                    'title' => '28',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '28px',
+                    ),
+                ),
+                array(
+                    'title' => '29',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '29px',
+                    ),
+                ),
+                array(
+                    'title' => '30',
+                    'block' => 'span',
+                    'styles' => array(
+                        'line-height'         => '30px',
+                    ),
+                ),
+            ),
+        ),
+        array(
             'title'   => 'Text',
             'items' => array(
                 array(
