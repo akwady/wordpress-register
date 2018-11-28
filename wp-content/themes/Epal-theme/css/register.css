@@ -79,38 +79,7 @@ div#message {
     color: #FFF;
     background: #099;
 }
-.hovaten {
-    background:url(images/hoten.png) left no-repeat;
-    padding-left: 28px !important;
-}
-.namsinh {
-    background:url(images/namsinh.png) left no-repeat;
-    padding-left: 28px !important;
-}
-.e-mail {
-    background:url(images/email.png) left no-repeat;
-    padding-left: 28px !important;
-}
-.dienthoai {
-    background:url(images/dienthoai.png) left no-repeat;
-    padding-left: 24px !important;
-}
-.nghe {
-    background:url(images/nghe.png) left no-repeat;
-    padding-left: 28px !important;
-}
-.diachi {
-    background:url(images/diachi.png) left no-repeat;
-    padding-left: 28px !important;
-}
-.gioithieu {
-    background:url(images/gioithieu.png) left no-repeat;
-    padding-left: 28px !important;
-}
-.matkhau {
-    background:url(images/matkhau.png) left no-repeat;
-    padding-left: 24px !important;
-}
+
 .ava, .tendangnhap {
     text-align: center;
 }
@@ -118,7 +87,15 @@ div#message {
     font-size: 24px;
     font-weight: bold;
 }
-
-
+.screen-reader-text {
+    display: none;
+}
+.media-modal.wp-core-ui {
+    width: 85%;
+    margin: 0 auto;
+}
+.thumbnail {
+    margin-bottom: 0;
+}
 
 

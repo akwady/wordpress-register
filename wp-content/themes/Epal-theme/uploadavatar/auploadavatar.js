@@ -1,7 +1,7 @@
 jQuery( document ).ready( function() {
-    var _vnkings_media = true;
-    var _vnkings_send_attachment = wp.media.editor.send.attachment;
-    jQuery( '.vnkings-image' ).click( function() {
+    var _epal_media = true;
+    var _epal_send_attachment = wp.media.editor.send.attachment;
+    jQuery( '.epal-image' ).click( function() {
         var button = jQuery( this ),
             textbox_id = jQuery( this ).attr( 'data-id' ),
             image_id = jQuery( this ).attr( 'data-src' ),
@@ -33,3 +33,4 @@ jQuery( document ).ready( function() {
         return false;
     } );
 } );
+

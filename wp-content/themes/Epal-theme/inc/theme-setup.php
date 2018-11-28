@@ -111,65 +111,47 @@ add_filter('gform_enable_field_label_visibility_settings', '__return_true');
 
 
 //*
-//* Bắt buộc thêm ảnh Featured Image trước khi đăng bài
-//*
-add_action('save_post', 'wpds_check_thumbnail');
-add_action('admin_notices', 'wpds_thumbnail_error');
-function wpds_check_thumbnail($post_id) {
-    // change to any <a href="https://thachpham.com/tag/custom-post-type" data-wpel-link="internal">custom post type</a>
-    if(get_post_type($post_id) != 'post')
-        return;
-    if ( !has_post_thumbnail( $post_id ) ) {
-        // set a transient to show the users an admin message
-        set_transient( "has_post_thumbnail", "no" );
-        // unhook this function so it doesn't loop infinitely
-        remove_action('save_post', 'wpds_check_thumbnail');
-        // update the post set it to draft
-        wp_update_post(array('ID' => $post_id, 'post_status' => 'draft'));
-        add_action('save_post', 'wpds_check_thumbnail');
-    } else {
-        delete_transient( "has_post_thumbnail" );
-    }
-}
-function wpds_thumbnail_error()
-{
-    // check if the transient is set, and display the error message
-    if ( get_transient( "has_post_thumbnail" ) == "no" ) {
-        echo "<div id='message' class='error'><p><strong>Bạn phải thêm ảnh Featured Image!.</strong></p></div>";
-        delete_transient( "has_post_thumbnail" );
-    }
-}
-
-
-
-//*
 //* Thêm màu trạng thái bài viết
 //*
-add_action('admin_footer','posts_status_color');
-function posts_status_color(){
+add_action('admin_footer', 'posts_status_color');
+function posts_status_color()
+{
     ?>
     <style>
-        .status-draft{background: #FCE3F2 !important;}
-        .status-pending{background: #87C5D6 !important;}
-        .status-publish{/* no background keep wp alternating colors */}
-        .status-future{background: #C6EBF5 !important;}
-        .status-private{background:#F2D46F;}
+        .status-draft {
+            background: #FCE3F2 !important;
+        }
+
+        .status-pending {
+            background: #87C5D6 !important;
+        }
+
+        .status-publish { /* no background keep wp alternating colors */
+        }
+
+        .status-future {
+            background: #C6EBF5 !important;
+        }
+
+        .status-private {
+            background: #F2D46F;
+        }
     </style>
     <?php
 }
 
 
-
 //*
 //* Tự động xóa revision của bài viết
 //*
-$wpdb->query( "DELETE FROM $wpdb->posts WHERE post_type = 'revision'" );
+$wpdb->query("DELETE FROM $wpdb->posts WHERE post_type = 'revision'");
 
 //*
 //* Chặn các truy vấn nguy hiểm
 //*
-global $user_ID; if($user_ID) {
-    if(!current_user_can('administrator')) {
+global $user_ID;
+if ($user_ID) {
+    if (!current_user_can('administrator')) {
         if (strlen($_SERVER['REQUEST_URI']) > 255 ||
             stripos($_SERVER['REQUEST_URI'], "eval(") ||
             stripos($_SERVER['REQUEST_URI'], "CONCAT") ||
@@ -184,22 +166,26 @@ global $user_ID; if($user_ID) {
 }
 
 
-function ilc_mce_buttons($buttons){
+function ilc_mce_buttons($buttons)
+{
     array_push($buttons,
         "fontselect"
     );
     return $buttons;
 }
+
 add_filter("mce_buttons_2", "ilc_mce_buttons");
 
 
-function wpb_imagelink_setup() {
-    $image_set = get_option( 'image_default_link_type' );
+function wpb_imagelink_setup()
+{
+    $image_set = get_option('image_default_link_type');
 
     if ($image_set !== 'none') {
         update_option('image_default_link_type', 'none');
     }
 }
+
 add_action('admin_init', 'wpb_imagelink_setup', 10);
 
 //*
@@ -232,18 +218,9 @@ function restrict_user_form($user)
         'walker' => ''
     );
     ?>
-
     <h3>Phân quyền category cho user</h3>
-
-    <table>
-        <tr>
-            <td>
-                <?php wp_dropdown_categories($args); ?>
-                <br />
-                <span>Sử dụng để hạn chế tác giả đăng lên chỉ một danh mục.</span>
-            </td>
-        </tr>
-    </table>
+    <div><?php wp_dropdown_categories($args); ?></div>
+    <p>Sử dụng để hạn chế tác giả đăng lên chỉ một danh mục.</p>
 <?php }
 
 function is_restrict()
@@ -259,7 +236,7 @@ add_action('edit_form_after_title', 'restrict_warning');
 function restrict_warning($post_data = false)
 {
     if (is_restrict()) {
-        $c    = get_user_meta(get_current_user_id(), '_access', true);
+        $c = get_user_meta(get_current_user_id(), '_access', true);
         $data = get_category($c);
         echo 'Bạn chỉ được đăng bài viết vào chuyên mục: <strong>' . $data->name . '</strong><br /><br />';
     }
@@ -270,6 +247,7 @@ function restrict_remove_meta_boxes()
     if (is_restrict())
         remove_meta_box('categorydiv', 'post', 'normal');
 }
+
 add_action('admin_menu', 'restrict_remove_meta_boxes');
 
 add_action('save_post', 'save_restrict_post');
@@ -292,10 +270,10 @@ function get_comment_list_by_user($clauses)
         global $user_ID, $wpdb;
         $clauses['join'] = ", wp_posts";
         $clauses['where'] .= " AND wp_posts.post_author = " . $user_ID . " AND wp_comments.comment_post_ID = wp_posts.ID";
-    }
-    ;
+    };
     return $clauses;
 }
+
 ;
 if (!current_user_can('edit_others_posts')) {
     add_filter('comments_clauses', 'get_comment_list_by_user');
@@ -314,11 +292,8 @@ function php_text($text)
     }
     return $text;
 }
+
 add_filter('widget_text', 'php_text', 99);
-
-
-
-
 
 
 ?>

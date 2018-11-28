@@ -93,6 +93,11 @@ get_header();
                                         <label for="pass2">Nhập lại Password</label>
                                         <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Password">
                                     </div>
+                                    <?php
+                                    my_custom_scripts();
+                                    epal_profile_fields($author_id);
+                                    epal_profile_update($author_id);
+                                    ?>
 
                                     <div class="form-group col-md-12">
                                         <button type="submit" class="btn btn-success">Cập nhật</button>
@@ -101,12 +106,11 @@ get_header();
                             <?php } else { ?>
                                 <div class="col-md-4">
                                     <a href="<?php echo get_author_posts_url($author_id); ?>">
-                                        <?php $user_ID = get_current_user_id(); $avatar = get_user_meta( $user_ID,  'vnkingspic', true); $avatar_image =wp_get_attachment_image_src($avatar, 'medium'); ?>
+                                        <?php $user_ID = get_current_user_id(); $avatar = get_user_meta( $user_ID,  'epal', true); $avatar_image =wp_get_attachment_image_src($avatar, 'medium'); ?>
                                         <?php if (!empty($avatar_image)) { ?>
-                                            <?php $user_ID = get_current_user_id(); $avatar = get_user_meta( $user_ID,  'vnkingspic', true); $avatar_image =wp_get_attachment_image_src($avatar, 'medium'); ?>
+                                            <?php $user_ID = get_current_user_id(); $avatar = get_user_meta( $user_ID,  'epal', true); $avatar_image =wp_get_attachment_image_src($avatar, 'medium'); ?>
                                             <img src="<?php echo $avatar_image[0]; ?>">
                                         <?php } else { ?>
-                                            <?php $user_ID = get_current_user_id(); $avatar = get_user_meta( $user_ID,  'vnkingspic', true); $avatar_image =wp_get_attachment_image_src($avatar, 'medium'); ?>
                                             <img src="12312312" alt="123123">
                                         <?php } ?>
                                     </a>
@@ -167,3 +171,5 @@ get_header();
     </section>
 
 <?php get_footer(); ?>
+
+
