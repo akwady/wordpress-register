@@ -10,7 +10,7 @@ function my_login_redirect($redirect_to, $request, $user)
             // redirect them to the default place
             return home_url() . '/wp-admin';
         } else {
-            return home_url();
+            return home_url('author');
         }
     } else {
         return $redirect_to;
@@ -32,8 +32,7 @@ add_action('init', 'redirect_login_page');
 // Kết thúc Redirect khi đăng nhập
 
 // Kiểm tra lỗi đăng nhập
-function login_failed()
-{
+function login_failed(){
     $login_page = home_url('/dang-nhap/');
     wp_redirect($login_page . '?login=failed');
     exit;
@@ -52,8 +51,7 @@ function verify_username_password($user, $username, $password)
 add_filter('authenticate', 'verify_username_password', 1, 3);
 
 
-function add_fields_user($profile_fields)
-{
+function add_fields_user($profile_fields){
     $profile_fields['googleplus'] = 'Google+';
     $profile_fields['phone'] = 'Số Điện Thoại';
     $profile_fields['facebook'] = 'Facebook profile URL';
@@ -151,3 +149,10 @@ function insert_attachment($file_handler, $post_id, $setthumb = 'false')
     return $attach_id;
 }
 
+
+add_filter( 'ajax_query_attachments_args', "user_restrict_media_library" );
+function user_restrict_media_library(  $query ) {
+    global $current_user;
+    $query['author'] = $current_user->ID ;
+    return $query;
+}

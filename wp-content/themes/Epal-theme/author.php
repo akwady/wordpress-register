@@ -98,7 +98,6 @@ get_header();
                                     epal_profile_fields($author_id);
                                     epal_profile_update($author_id);
                                     ?>
-
                                     <div class="form-group col-md-12">
                                         <button type="submit" class="btn btn-success">Cập nhật</button>
                                     </div>
